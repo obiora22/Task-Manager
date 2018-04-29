@@ -1,0 +1,22 @@
+.custom-card {
+  padding: 20px;
+  min-height: 20%;
+  
+}
+
+.custom-card__button {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  padding: 4px;
+}
+
+.custom-card--show-details {
+
+  border-color: orange;
+}
+
+.custom-card--hide-details{
+  border-color: greenyellow;
+}

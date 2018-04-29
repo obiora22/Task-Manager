@@ -1,0 +1,11 @@
+.check-list-button {
+  display: inline;
+  border: 1px solid grey;
+  padding: 3px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
