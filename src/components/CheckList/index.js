@@ -8,8 +8,8 @@ class CheckList extends React.Component {
   }
 
   render() {
-    var tasks = this.props.tasks.map((task) => 
-      <li class="flex">
+    var tasks = this.props.tasks.map((task, index) => 
+      <li className="flex" key={index}>
         <input type="checkbox" defaultChecked={task.done}/>
         {task.name}
         <p className="check-list-button">Remove Task</p>
