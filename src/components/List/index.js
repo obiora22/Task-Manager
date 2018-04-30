@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card/index';
 import './index.css';
 
@@ -9,10 +10,11 @@ class List extends React.Component {
     var cards  = this.props.cards.map((card, index) => {
      return  <Card 
         key={card.id}
-        id={card.id}
+        cardId={card.id}
         title={card.title}
         description={card.description}
         tasks={card.tasks}
+        taskCallbacks={this.props.taskCallbacks}
       />
     })
     return (
@@ -26,6 +28,10 @@ class List extends React.Component {
   componentDidMount() {
     this.setState({ someKey: 'otherValue' });
   }
+}
+
+List.propTypes = {
+  taskCallbacks: PropTypes.object.isRequired
 }
 
 export default List;

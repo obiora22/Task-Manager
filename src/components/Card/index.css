@@ -12,6 +12,9 @@
   padding: 4px;
 }
 
+.custom-card__form {
+  width: 100%;
+}
 .custom-card--show-details {
 
   border-color: orange;

@@ -23,4 +23,5 @@ console.log(newStudent);
 console.log(student);
 console.log(newGrades);
 console.log(spliceGrades);
-console.log(newNumbers);
+console.dir(newNumbers);
+console.table(newNumbers);

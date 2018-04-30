@@ -25,7 +25,7 @@ class Login extends React.Component {
     })
     .then((data) => {
       console.log(data);
-      sessionStorage.setItem('access_token', data.id);;
+      sessionStorage.setItem('access_token', data.id);
       console.log(sessionStorage)
     });
   }

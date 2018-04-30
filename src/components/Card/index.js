@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CheckList from '../CheckList/index';
+
 import './index.css';
 
 class Card extends React.Component {
@@ -13,6 +15,7 @@ class Card extends React.Component {
       showDetails: !this.state.showDetails
     })
   }
+  
   render() { 
     const cardDetails = (
       <div ref={this.elementRef}>
@@ -24,6 +27,7 @@ class Card extends React.Component {
           <CheckList 
             cardId={this.props.id}
             tasks={this.props.tasks}
+            taskCallbacks={this.props.taskCallbacks}
           />
         </div>
       </div>
@@ -37,13 +41,20 @@ class Card extends React.Component {
         </p>
         {this.state.showDetails ? cardDetails : ''}
         <div>
-          <p className="custom-card__button">Add task</p>
-          <input type="textarea" />
+          {/* <p className="custom-card__button" onClick={this.props.taskCallbacks.addTask}>Add task</p> */}
+          
         </div>
       </div>
     )
   }
 
+}
+
+Card.propTypes = {
+  cardId: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  taskCallbacks: PropTypes.object.isRequired
 }
 
 export default Card;

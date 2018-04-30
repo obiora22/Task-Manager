@@ -15,7 +15,9 @@ class KanbanContainer extends React.Component {
     super();
     this.state = { cards: [] };
   }
+  addTask(cardId, taskName) {
 
+  }
   componentDidMount() {
     fetch(URL, {
       method: 'GET',
@@ -36,7 +38,14 @@ class KanbanContainer extends React.Component {
 
   render() {
     console.log(this.state.cards)
-    return <KanbanBoard cards={this.state.cards}/>
+    return <KanbanBoard cards={this.state.cards} 
+            taskCallbacks={
+            {
+              add: this.addTask,
+              delete: this.deleteTask,
+              toggle: this.toggleTask
+            }
+          }/>
   }
 
 }
